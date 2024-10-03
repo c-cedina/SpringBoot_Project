@@ -19,14 +19,14 @@ public class NurseController {
     }
 	
     
-    @PostMapping("/login")
-	public String login(@RequestBody Nurse loginNurse) {
+    @PostMapping("/nurse/login")
+	public boolean login(@RequestBody Nurse loginNurse) {
 
 		for (Nurse nurse : nurses) {
             if (nurse.getUser().equals(loginNurse.getUser()) && nurse.getPassword().equals(loginNurse.getPassword())) {
-            	return "Te has logeado en el Hospital!";
+            	return true;
             }
         }
-		return "Credenciales incorrectas!";
+		return false;
 	}
 }
