@@ -18,6 +18,10 @@ public class NurseController {
         nurses.add(new Nurse("Nil", "nil.nurse", "nil123"));
     }
 	
+    @GetMapping("/nurse/index")
+    public ResponseEntity<List<Nurse>> getAll(){
+    	return ResponseEntity.ok(nurses);
+    }
     
     @PostMapping("/nurse/login")
 	public boolean login(@RequestBody Nurse loginNurse) {
