@@ -38,14 +38,13 @@ public class NurseController {
 		return false;
 	}
     
-	@GetMapping("/nurse/name/{name}")
+    @GetMapping("/nurse/name/{name}")
 	public ResponseEntity<Nurse> findByName(@PathVariable String name){
 		for(Nurse nurse : nurses) {
 			if(nurse.getName().equalsIgnoreCase(name)) {
 				return ResponseEntity.ok(nurse);
 			}
-
 		}
 		return ResponseEntity.notFound().build();
-	}
+    }
 }
