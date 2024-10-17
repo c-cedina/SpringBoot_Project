@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
 @Controller
 @RequestMapping("/nurse")
@@ -19,12 +18,13 @@ public class NurseController {
 	
 	private static List<Nurse> nurses = new ArrayList<>();
 	
-    public NurseController() {
-        nurses.add(new Nurse("Sergio", "sergio.nurse", "sergio123"));
-        nurses.add(new Nurse("Chías", "chias.nurse", "chias123"));
-        nurses.add(new Nurse("Gerard", "gerard.nurse", "gerard123"));
-        nurses.add(new Nurse("Nil", "nil.nurse", "nil123"));
-    }
+	public NurseController() {
+	    nurses.add(new Nurse(1, "Sergio", "sergio.nurse", "sergio123"));
+	    nurses.add(new Nurse(2, "Chías", "chias.nurse", "chias123"));
+	    nurses.add(new Nurse(3, "Gerard", "gerard.nurse", "gerard123"));
+	    nurses.add(new Nurse(4, "Nil", "nil.nurse", "nil123"));
+	}
+
 	
     @GetMapping("/index")
     public ResponseEntity<List<Nurse>> getAll(){
