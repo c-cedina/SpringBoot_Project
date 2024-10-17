@@ -16,15 +16,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/nurse")
 public class NurseController {
 	
-	private static List<Nurse> nurses = new ArrayList<>();
+	private final NurseRepository nurseRepository;
 	
-	public NurseController() {
-	    nurses.add(new Nurse(1, "Sergio", "sergio.nurse", "sergio123"));
-	    nurses.add(new Nurse(2, "Chías", "chias.nurse", "chias123"));
-	    nurses.add(new Nurse(3, "Gerard", "gerard.nurse", "gerard123"));
-	    nurses.add(new Nurse(4, "Nil", "nil.nurse", "nil123"));
-	}
-
+    public NurseController(NurseRepository nurseRepository) {
+        this.nurseRepository = nurseRepository;
+    }
 	
     @GetMapping("/index")
     public ResponseEntity<List<Nurse>> getAll(){
