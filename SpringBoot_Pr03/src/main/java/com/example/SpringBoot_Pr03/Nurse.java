@@ -4,13 +4,15 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "nurses")
 public class Nurse {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int nurseId;
+	private int id;
 	
     private String name;
 	private String user;
@@ -19,19 +21,19 @@ public class Nurse {
     public Nurse() {
     }
 
-	public Nurse(int nurseId, String name, String user, String password) {
-		this.nurseId = nurseId;
+	public Nurse(int id, String name, String user, String password) {
+		this.id = id;
 		this.name = name;
 		this.user = user;
 		this.password = password;
 	}
 	
 	public int getNurseId() {
-		return nurseId;
+		return id;
 	}
 
 	public void setNurseId(int nurseId) {
-		this.nurseId = nurseId;
+		this.id = nurseId;
 	}
 
 	public String getName() {
