@@ -1,5 +1,8 @@
 package com.example.SpringBoot_Pr03;
 
+import jakarta.persistence.Entity;
+
+@Entity
 public class Nurse {
 
 	private String name;
