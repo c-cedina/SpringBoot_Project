@@ -1,4 +1,4 @@
-package com.example.SpringBoot_Pr03;
+package entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -7,7 +7,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "nurses")
+//@Table(name = "nurses")
 public class Nurse {
 
     @Id
@@ -18,7 +18,7 @@ public class Nurse {
 	private String user;
 	private String password;
 	
-    public Nurse() {
+ /*   public Nurse() {
     }
 
 	public Nurse(int id, String name, String user, String password) {
@@ -26,7 +26,7 @@ public class Nurse {
 		this.name = name;
 		this.user = user;
 		this.password = password;
-	}
+	}*/
 	
 	public int getNurseId() {
 		return id;
