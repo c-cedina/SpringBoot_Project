@@ -1,62 +1,56 @@
 package entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
-//@Table(name = "nurses")
+@Table(name = "Nurse")
 public class Nurse {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private int nurseId;
 	
-    private String name;
-	private String user;
-	private String password;
+    private String nurseName;
+	private String nurseUser;
+	private String nursePassword;
 	
- /*   public Nurse() {
-    }
+	public Nurse() {}
+	
+	public Nurse(int nurseId, String nurseName, String nurseUser, String nursePassword) {
+		this.nurseName = nurseName;
+		this.nurseUser = nurseUser;
+		this.nursePassword = nursePassword;
+	}
 
-	public Nurse(int id, String name, String user, String password) {
-		this.id = id;
-		this.name = name;
-		this.user = user;
-		this.password = password;
-	}*/
-	
 	public int getNurseId() {
-		return id;
+		return nurseId;
 	}
 
 	public void setNurseId(int nurseId) {
-		this.id = nurseId;
+		this.nurseId = nurseId;
 	}
 
-	public String getName() {
-		return name;
+	public String getNurseName() {
+		return nurseName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setNurseName(String nurseName) {
+		this.nurseName = nurseName;
 	}
 
-	public String getUser() {
-		return user;
+	public String getNurseUser() {
+		return nurseUser;
 	}
 
-	public void setUser(String user) {
-		this.user = user;
+	public void setNurseUser(String nurseUser) {
+		this.nurseUser = nurseUser;
 	}
 
-	public String getPassword() {
-		return password;
+	public String getNursePassword() {
+		return nursePassword;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setNursePassword(String nursePassword) {
+		this.nursePassword = nursePassword;
 	}
 }

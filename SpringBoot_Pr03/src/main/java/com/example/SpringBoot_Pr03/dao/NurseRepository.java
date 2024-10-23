@@ -8,7 +8,7 @@ import entity.Nurse;
 
 public interface NurseRepository extends CrudRepository<Nurse, Integer> {
 	
-	Optional<Nurse> findByUser(String user);
-	Optional<Nurse> findByName(String name);
+	Nurse findByNurseUser(String nurseUser);
+	Optional<Nurse> findByNurseName(String nurseName);
 
 }
