@@ -11,15 +11,15 @@ public class Nurse {
 	private int nurseId;
 	
     private String name;
-	private String nurseUser;
-	private String nursePassword;
+	private String user;
+	private String password;
 	
 	public Nurse() {}
 	
-	public Nurse(int nurseId, String name, String nurseUser, String nursePassword) {
+	public Nurse(int nurseId, String name, String user, String password) {
 		this.name = name;
-		this.nurseUser = nurseUser;
-		this.nursePassword = nursePassword;
+		this.user = user;
+		this.password = password;
 	}
 
 	public int getNurseId() {
@@ -38,19 +38,19 @@ public class Nurse {
 		this.name = name;
 	}
 
-	public String getNurseUser() {
-		return nurseUser;
+	public String getUser() {
+		return user;
 	}
 
-	public void setNurseUser(String nurseUser) {
-		this.nurseUser = nurseUser;
+	public void setUser(String user) {
+		this.user = user;
 	}
 
-	public String getNursePassword() {
-		return nursePassword;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setNursePassword(String nursePassword) {
-		this.nursePassword = nursePassword;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 }

@@ -3,7 +3,6 @@ package com.example.SpringBoot_Pr03.controller;
 import java.util.Optional;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -36,12 +35,12 @@ public class NurseController {
     @PostMapping("/login")
     public @ResponseBody ResponseEntity<Boolean> login(@RequestBody Nurse loginNurse) {
     	// Get nurse by user's name
-        Nurse nurse = nurseRepository.findByNurseUser(loginNurse.getNurseUser());
+        Nurse nurse = nurseRepository.findByUser(loginNurse.getUser());
 
         // Check if nurse exists
         if (nurse != null) {
         	// Check password
-            if (nurse.getNursePassword().equals(loginNurse.getNursePassword())) {
+            if (nurse.getPassword().equals(loginNurse.getPassword())) {
                 return ResponseEntity.ok(true);
             }
         }
@@ -76,14 +75,14 @@ public class NurseController {
             Nurse nursetoUpdate = existingNurse.get();
             
             // Update only not null data
-            if (nurse.getNurseName() != null) {
-                nursetoUpdate.setNurseName(nurse.getNurseName());
+            if (nurse.getName() != null) {
+                nursetoUpdate.setName(nurse.getName());
             }
-            if (nurse.getNurseUser() != null) {
-                nursetoUpdate.setNurseUser(nurse.getNurseUser());
+            if (nurse.getUser() != null) {
+                nursetoUpdate.setUser(nurse.getUser());
             }
-            if (nurse.getNursePassword() != null) {
-                nursetoUpdate.setNursePassword(nurse.getNursePassword());
+            if (nurse.getPassword() != null) {
+                nursetoUpdate.setPassword(nurse.getPassword());
             }
 
             // Save changes
