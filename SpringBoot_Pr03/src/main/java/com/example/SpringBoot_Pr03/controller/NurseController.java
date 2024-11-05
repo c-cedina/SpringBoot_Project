@@ -27,8 +27,9 @@ public class NurseController {
     }
 	
     @GetMapping("/index")
-    public @ResponseBody Iterable<Nurse> getAllUsers(){
-    	return nurseRepository.findAll();
+    public ResponseEntity<Iterable<Nurse>> getAllUsers() {
+        Iterable<Nurse> nurses = nurseRepository.findAll();
+        return ResponseEntity.ok(nurses);
     }
     
     @PostMapping("/login")
