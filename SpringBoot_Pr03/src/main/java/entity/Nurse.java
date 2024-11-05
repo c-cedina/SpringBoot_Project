@@ -10,14 +10,14 @@ public class Nurse {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int nurseId;
 	
-    private String nurseName;
+    private String name;
 	private String nurseUser;
 	private String nursePassword;
 	
 	public Nurse() {}
 	
-	public Nurse(int nurseId, String nurseName, String nurseUser, String nursePassword) {
-		this.nurseName = nurseName;
+	public Nurse(int nurseId, String name, String nurseUser, String nursePassword) {
+		this.name = name;
 		this.nurseUser = nurseUser;
 		this.nursePassword = nursePassword;
 	}
@@ -30,12 +30,12 @@ public class Nurse {
 		this.nurseId = nurseId;
 	}
 
-	public String getNurseName() {
-		return nurseName;
+	public String getName() {
+		return name;
 	}
 
-	public void setNurseName(String nurseName) {
-		this.nurseName = nurseName;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getNurseUser() {
