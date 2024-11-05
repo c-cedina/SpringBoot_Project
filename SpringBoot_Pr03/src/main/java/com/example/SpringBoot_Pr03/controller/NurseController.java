@@ -11,12 +11,13 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.example.SpringBoot_Pr03.dao.NurseRepository;
 
 import entity.Nurse;
 
-@Controller
+@RestController
 @RequestMapping("/nurse")
 public class NurseController {
 	
