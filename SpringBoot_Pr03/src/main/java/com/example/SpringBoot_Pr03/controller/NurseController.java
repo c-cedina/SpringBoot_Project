@@ -59,6 +59,16 @@ public class NurseController {
     	return ResponseEntity.notFound().build();
     }
     
+    @GetMapping("/{nurseId}")
+    public ResponseEntity<Nurse> findById(@PathVariable int nurseId) {
+    	Optional<Nurse> nurseOptional = nurseRepository.findById(nurseId);
+    	if(nurseOptional.isPresent()) {
+    		return ResponseEntity.ok(nurseOptional.get());
+    	} else {
+    		return ResponseEntity.notFound().build();
+    	}
+    }
+    
     @PutMapping("/update/{nurseId}")
     public ResponseEntity<Nurse> update(@PathVariable int nurseId, @RequestBody Nurse nurse) {
     	
@@ -92,6 +102,6 @@ public class NurseController {
         }
         
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
-    }
+    } 
     
 }
