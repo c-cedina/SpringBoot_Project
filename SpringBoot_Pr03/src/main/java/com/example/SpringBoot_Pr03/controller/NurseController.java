@@ -47,8 +47,15 @@ public class NurseController {
     }
 
     @GetMapping("/nurseName/{nurseName}")
-    public @ResponseBody Optional<Nurse> findByNurseName(@PathVariable ("nurseName") String nurseName){
-        return nurseRepository.findByNurseName(nurseName);
+    public ResponseEntity<Nurse> findByNurseName(@PathVariable String nurseName){
+
+    	Nurse nurse = nurseRepository.findByNurseName(nurseName);
+    	
+        if(nurse.getNurseName().equalsIgnoreCase(nurseName)) {
+        	return ResponseEntity.ok(nurse);
+        }
+
+    	return ResponseEntity.notFound().build();
     }
     
     @PutMapping("/update/{nurseId}")
