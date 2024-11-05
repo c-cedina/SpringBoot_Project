@@ -48,12 +48,12 @@ public class NurseController {
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(false);
     }
 
-    @GetMapping("/nurseName/{nurseName}")
-    public ResponseEntity<Nurse> findByNurseName(@PathVariable String nurseName){
+    @GetMapping("/name/{name}")
+    public ResponseEntity<Nurse> findByName(@PathVariable String name){
 
-    	Nurse nurse = nurseRepository.findByNurseName(nurseName);
+    	Nurse nurse = nurseRepository.findByName(name);
     	
-        if(nurse.getNurseName().equalsIgnoreCase(nurseName)) {
+        if(nurse != null && nurse.getName().equalsIgnoreCase(name)) {
         	return ResponseEntity.ok(nurse);
         }
 
