@@ -14,7 +14,7 @@ Este proyecto es una aplicación backend desarrollada con Spring Boot y Hibernat
 ## Instalación
 
 ### 1. Clonar el repositorio en la IDE
-En este proyetco se ha utilizado Eclipse.
+Para este proyecto se ha utilizado la IDE de Eclipse, pero es válida cualquier otra.
    - Abre Eclipse y selecciona `File > Import > Git > Projects from Git > Clone URI`.
    - Ingresa la URL del repositorio de GitHub:
      ```plaintext
@@ -27,12 +27,12 @@ En este proyetco se ha utilizado Eclipse.
    - Accede a phpMyAdmin y crea una nueva base de datos para el proyecto.
    - Configura el archivo `application.properties` en el directorio `src/main/resources` con los detalles de conexión a la base de datos:
      ```properties
-     spring.datasource.url=jdbc:mysql://localhost:3306/tu_base_de_datos?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-     spring.datasource.username=tu_usuario
-     spring.datasource.password=tu_contraseña
-     spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
      spring.jpa.hibernate.ddl-auto=update
-     spring.jpa.show-sql=true
+     spring.jpa.show-sql: true
+     spring.datasource.url = jdbc:mysql://sql7.freemysqlhosting.net:3306/sql7742899?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+     spring.datasource.username=sql7742899
+     spring.datasource.password=BJrKMayFZa
+     spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
      ```
 
 ### 3. Instalación de dependencias
