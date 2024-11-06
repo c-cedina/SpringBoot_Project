@@ -39,8 +39,7 @@ Para este proyecto se ha utilizado la IDE de Eclipse, pero es válida cualquier 
    Eclipse gestionará las dependencias automáticamente si tienes Maven configurado. De lo contrario, haz clic derecho en el proyecto, selecciona `Maven > Update Project` para descargar todas las dependencias necesarias.
 
 ### 4. Ejecutar la aplicación
-   Para ejecutar la aplicación:
-   - Haz clic derecho en el proyecto y selecciona `Run As > Spring Boot App`.
+   Para ejecutar la aplicación haz clic derecho en el main del proyecto, en este caso `HospitalApplication` con ruta `SpringBoot_Pr03\src\main\java\com\example\SpringBoot_Pr03` y selecciona `Run As > Java Application`.
 
 ---
 
