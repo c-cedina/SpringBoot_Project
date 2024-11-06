@@ -40,9 +40,9 @@ Para este proyecto se ha utilizado la IDE de Eclipse, pero es válida cualquier 
 
 ### 4. Ejecutar la aplicación
    Para ejecutar la aplicación haz clic derecho en el main del proyecto, en este caso `HospitalApplication` con ruta `SpringBoot_Pr03\src\main\java\com\example\SpringBoot_Pr03` y selecciona `Run As > Java Application`.
-
-
-
+  
+  
+  
 ---
 
 ## Uso
@@ -59,15 +59,9 @@ La API proporciona varias funcionalidades para interactuar con los recursos de e
     [
       {
         "nurseId": 1,
-        "name": "Laura",
-        "user": "laura_23",
+        "name": "fiorella",
+        "user": "fiorella01",
         "password": "password123"
-      },
-      {
-        "nurseId": 2,
-        "name": "Juan",
-        "user": "juan_99",
-        "password": "pass456"
       }
     ]
     ```
@@ -80,8 +74,8 @@ La API proporciona varias funcionalidades para interactuar con los recursos de e
 - **Cuerpo de la solicitud:**
     ```json
     {
-      "user": "laura_23",
-      "password": "password123"
+      "user": "david02",
+      "password": "securepass"
     }
     ```
 - **Respuesta de ejemplo:**
@@ -97,10 +91,10 @@ La API proporciona varias funcionalidades para interactuar con los recursos de e
 - **Respuesta de ejemplo:**
   ```json
   {
-    "nurseId": 1,
-    "name": "Laura",
-    "user": "laura_23",
-    "password": "password123"
+    "nurseId": 3,
+    "name": "sergio",
+    "user": "sergio03",
+    "password": "passw0rd"
   }
 
 ---
@@ -112,10 +106,10 @@ La API proporciona varias funcionalidades para interactuar con los recursos de e
 - **Respuesta de ejemplo:**
   ```json
   {
-    "nurseId": 1,
-    "name": "Laura",
-    "user": "laura_23",
-    "password": "password123"
+    "nurseId": 4,
+    "name": "martina",
+    "user": "martina04",
+    "password": "m@rt!na123"
   }
 
 ---
@@ -129,9 +123,38 @@ La API proporciona varias funcionalidades para interactuar con los recursos de e
   ```json
   {
   "nurseId": 1,
-  "name": "Laura G.",
-  "user": "laura_updated",
+  "name": "fiorella_updated",
+  "user": "fiorella02",
   "password": "newpassword123"
   }
 
+---
+
+#### **Crear un nuevo enfermero**
+- **URL:** POST /nurse/create
+- **Descripción:** Se crea un nuevo enfermero en la base de datos.
+- **Respuesta de ejemplo:** 
+  
+  ```json
+  {
+  "nurseId": 1,
+  "name": "fiorella_updated",
+  "user": "fiorella02",
+  "password": "newpassword123"
+  }
+---
+
+#### **Eliminar un enfermero por Id**
+- **URL:** POST /nurse/delete/{nurseId}
+- **Descripción:** Se elimina un enfermero mediante su ID en la base de datos.
+- **Parámetro de ruta:** nurseId - ID del enfermero.
+- **Respuesta de ejemplo:** 
+  
+  ```json
+  {
+  "nurseId": 1,
+  "name": "fiorella_updated",
+  "user": "fiorella02",
+  "password": "newpassword123"
+  }
   
