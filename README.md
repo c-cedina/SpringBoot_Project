@@ -18,7 +18,7 @@ En este proyetco se ha utilizado Eclipse.
    - Abre Eclipse y selecciona `File > Import > Git > Projects from Git > Clone URI`.
    - Ingresa la URL del repositorio de GitHub:
      ```plaintext
-     [https://github.com/usuario/repositorio.git](https://github.com/SergioArenas98/SpringBoot_Project.git)
+     https://github.com/SergioArenas98/SpringBoot_Project.git
      ```
    - Presiona `Next`, selecciona la rama principal (`main` o `master`) y haz clic en `Finish`.
    - Luego, Eclipse descargará el proyecto y lo importará automáticamente.
