@@ -101,7 +101,7 @@ La API proporciona varias funcionalidades para interactuar con los recursos de e
     "password": "password123"
   }
 
-  ---
+---
 
 #### **Buscar enfermero por ID**
 - **URL:** GET /nurse/{nurseId}
@@ -109,12 +109,12 @@ La API proporciona varias funcionalidades para interactuar con los recursos de e
 - **Parámetro de ruta:** nurseId - ID del enfermero.
 - **Respuesta de ejemplo:**
   ```json
-{
-  "nurseId": 1,
-  "name": "Laura",
-  "user": "laura_23",
-  "password": "password123"
-}
+  {
+    "nurseId": 1,
+    "name": "Laura",
+    "user": "laura_23",
+    "password": "password123"
+  }
 
 ---
 
