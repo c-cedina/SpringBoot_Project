@@ -130,6 +130,6 @@ La API proporciona varias funcionalidades para interactuar con los recursos de e
   "name": "Laura G.",
   "user": "laura_updated",
   "password": "newpassword123"
-}
+  }
 
   
