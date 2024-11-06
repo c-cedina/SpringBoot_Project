@@ -104,4 +104,16 @@ public class NurseController {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
     } 
     
+    @PostMapping("/createNurse")
+    public @ResponseBody ResponseEntity<Nurse> createNurse(@RequestBody Nurse newNurse){
+    	if(newNurse.getName() != null || newNurse.getPassword() != null) {
+    		if(newNurse.getUser() == null) {
+    			newNurse.setUser(newNurse.getName());
+    		}
+    		Nurse savedNurse = nurseRepository.save(newNurse);
+            return ResponseEntity.status(HttpStatus.CREATED).body(savedNurse);
+    	}else {
+    		return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);
+    	}
+    }
 }
