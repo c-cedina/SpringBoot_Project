@@ -41,6 +41,8 @@ Para este proyecto se ha utilizado la IDE de Eclipse, pero es válida cualquier 
 ### 4. Ejecutar la aplicación
    Para ejecutar la aplicación haz clic derecho en el main del proyecto, en este caso `HospitalApplication` con ruta `SpringBoot_Pr03\src\main\java\com\example\SpringBoot_Pr03` y selecciona `Run As > Java Application`.
 
+
+
 ---
 
 ## Uso
