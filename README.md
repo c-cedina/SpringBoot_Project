@@ -13,11 +13,12 @@ Este proyecto es una aplicación backend desarrollada con Spring Boot y Hibernat
 
 ## Instalación
 
-### 1. Clonar el repositorio en Eclipse
+### 1. Clonar el repositorio en la IDE
+En este proyetco se ha utilizado Eclipse.
    - Abre Eclipse y selecciona `File > Import > Git > Projects from Git > Clone URI`.
    - Ingresa la URL del repositorio de GitHub:
      ```plaintext
-     https://github.com/usuario/repositorio.git
+     [https://github.com/usuario/repositorio.git](https://github.com/SergioArenas98/SpringBoot_Project.git)
      ```
    - Presiona `Next`, selecciona la rama principal (`main` o `master`) y haz clic en `Finish`.
    - Luego, Eclipse descargará el proyecto y lo importará automáticamente.
