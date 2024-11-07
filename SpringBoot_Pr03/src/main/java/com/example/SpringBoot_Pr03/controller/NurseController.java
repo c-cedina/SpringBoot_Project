@@ -69,7 +69,7 @@ public class NurseController {
     	}
     }
     
-    @PutMapping("/update/{nurseId}")
+    @PutMapping("/{nurseId}")
     public ResponseEntity<Nurse> update(@PathVariable int nurseId, @RequestBody Nurse nurse) {
     	
         // Check if Nurse object is null
