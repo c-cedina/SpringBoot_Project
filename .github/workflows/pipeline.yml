@@ -9,32 +9,8 @@ on:
       - master
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Check out code
-      uses: actions/checkout@v4
-
-    - name: Set up JDK 17
-      uses: actions/setup-java@v4
-      with:
-        java-version: '17'
-        distribution: 'adoptopenjdk'
-
-    - name: Cache Maven dependencies
-      uses: actions/cache@v3
-      with:
-        path: ~/.m2/repository
-        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-        restore-keys: |
-          ${{ runner.os }}-maven-
-
-    - name: Build with Maven
-      run: mvn clean install -DskipTests
-
-    - name: Run tests with Maven
-      run: mvn test
-
-    - name: Deploy (if needed)
-      run: mvn deploy  # Descomenta este paso si tienes un proceso de despliegue
+  call-basic-validation:
+    name: Basic validation
+    uses: actions/reusable-workflows/.github/workflows/basic-validation.yml@main
+    with:
+      node-version: '20.x'
