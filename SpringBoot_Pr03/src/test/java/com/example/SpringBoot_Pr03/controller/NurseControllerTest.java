@@ -89,7 +89,7 @@ class NurseControllerTest {
         when(nurseRepository.findById(1)).thenReturn(Optional.of(testNurse));
         when(nurseRepository.save(any(Nurse.class))).thenReturn(testNurse);
 
-        mockMvc.perform(MockMvcRequestBuilders.put("/nurse/update/1")
+        mockMvc.perform(MockMvcRequestBuilders.put("/nurse/1")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{\"name\":\"UpdatedName\"}"))
                 .andExpect(status().isOk())
