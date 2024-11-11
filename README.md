@@ -1,31 +1,31 @@
 # Hospital Nurse Application
 
-## Descripción
+## Description
 
-Este proyecto es una aplicación backend desarrollada con Spring Boot y Hibernate, diseñada para gestionar la información de enfermeros en un entorno hospitalario. Permite realizar operaciones CRUD (Crear, Leer, Actualizar y Borrar) sobre los datos de los enfermeros, así como realizar autenticación básica mediante un sistema de login. Este proyecto se conecta a una base de datos SQL gestionada con phpMyAdmin para el almacenamiento de los datos.
+This project is a backend application developed with Spring Boot and Hibernate, designed to manage nurse information in a hospital setting. It allows performing CRUD (Create, Read, Update, Delete) operations on nurse data, as well as basic authentication via a login system. This project connects to an SQL database managed with phpMyAdmin for data storage.
 
-## Tecnologías utilizadas
-- **Java**: Lenguaje de programación.
-- **Spring Boot**: Framework principal para la creación de la API REST.
-- **Hibernate**: Framework de mapeo objeto-relacional (ORM) para gestionar la base de datos.
-- **phpMyAdmin**: Sistema de gestión de base de datos.
-- **Maven**: Herramienta de gestión de dependencias.
+## Technologies Used
+- **Java**: Programming language.
+- **Spring Boot**: Main framework for creating the REST API.
+- **Hibernate**: Object-Relational Mapping (ORM) framework for managing the database.
+- **phpMyAdmin**: Database management system.
+- **Maven**: Dependency management tool.
 
-## Instalación
+## Installation
 
-### 1. Clonar el repositorio en la IDE
-Para este proyecto se ha utilizado la IDE de Eclipse, pero es válida cualquier otra.
-   - Abre Eclipse y selecciona `File > Import > Git > Projects from Git > Clone URI`.
-   - Ingresa la URL del repositorio de GitHub:
+### 1. Clone the Repository in the IDE
+For this project, Eclipse IDE has been used, but any other IDE is valid.
+   - Open Eclipse and select `File > Import > Git > Projects from Git > Clone URI`.
+   - Enter the URL of the GitHub repository:
      ```plaintext
      https://github.com/SergioArenas98/SpringBoot_Project.git
      ```
-   - Presiona `Next`, selecciona la rama principal (`main` o `master`) y haz clic en `Finish`.
-   - Luego, Eclipse descargará el proyecto y lo importará automáticamente.
+   - Press `Next`, select the main branch (`main` or `master`), and click `Finish`.
+   - Then, Eclipse will download the project and import it automatically.
 
-### 2. Configuración de base de datos en phpMyAdmin
-   - Accede a phpMyAdmin y crea una nueva base de datos para el proyecto.
-   - Configura el archivo `application.properties` en el directorio `src/main/resources` con los detalles de conexión a la base de datos:
+### 2. Configure the Database in phpMyAdmin
+   - Access phpMyAdmin and create a new database for the project.
+   - Configure the `application.properties` file in the `src/main/resources` directory with the database connection details:
      ```properties
      spring.jpa.hibernate.ddl-auto=update
      spring.jpa.show-sql: true
@@ -35,26 +35,24 @@ Para este proyecto se ha utilizado la IDE de Eclipse, pero es válida cualquier 
      spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
      ```
 
-### 3. Instalación de dependencias
-   Eclipse gestionará las dependencias automáticamente si tienes Maven configurado. De lo contrario, haz clic derecho en el proyecto, selecciona `Maven > Update Project` para descargar todas las dependencias necesarias.
+### 3. Install Dependencies
+   Eclipse will automatically manage dependencies if Maven is configured. Otherwise, right-click the project, select `Maven > Update Project` to download all necessary dependencies.
 
-### 4. Ejecutar la aplicación
-   Para ejecutar la aplicación haz clic derecho en el main del proyecto, en este caso `HospitalApplication` con ruta `SpringBoot_Pr03\src\main\java\com\example\SpringBoot_Pr03` y selecciona `Run As > Java Application`.
-  
-  
+### 4. Run the Application
+   To run the application, right-click on the main class of the project, in this case `HospitalApplication` located at `SpringBoot_Pr03\src\main\java\com\example\SpringBoot_Pr03`, and select `Run As > Java Application`.
   
 ---
 
-## Uso
+## Usage
 
-La API proporciona varias funcionalidades para interactuar con los recursos de enfermeros. A continuación se detallan los endpoints principales.
+The API provides several functionalities to interact with nurse resources. Below are the main endpoints.
 
-### Endpoints de la API 
+### API Endpoints
 
-#### **Obtener todos los enfermeros**
+#### **Get All Nurses**
 - **URL:** `GET /nurse/index`
-- **Descripción:** Devuelve una lista de todos los enfermeros registrados en el sistema.
-- **Respuesta de ejemplo:**
+- **Description:** Returns a list of all nurses registered in the system.
+- **Example Response:**
     ```json
     [
       {
@@ -68,27 +66,27 @@ La API proporciona varias funcionalidades para interactuar con los recursos de e
 
 ---
 
-#### **Iniciar sesión**
+#### **Login**
 - **URL:** `POST /nurse/login`
-- **Descripción:** Autentica a un enfermero con su nombre de usuario y contraseña.
-- **Cuerpo de la solicitud:**
+- **Description:** Authenticates a nurse with their username and password.
+- **Request Body:**
     ```json
     {
       "user": "david02",
       "password": "securepass"
     }
     ```
-- **Respuesta de ejemplo:**
-  - **200 OK** (Credenciales correctas): `true`
-  - **401 Unauthorized** (Credenciales incorrectas): `false`
+- **Example Response:**
+  - **200 OK** (Correct credentials): `true`
+  - **401 Unauthorized** (Incorrect credentials): `false`
 
 ---
 
-#### **Buscar enfermero por nombre**
+#### **Search Nurse by Name**
 - **URL:** `GET /nurse/name/{name}`
-- **Descripción:** Busca un enfermero por su nombre.
-- **Parámetro de ruta:** `name` - El nombre del enfermero que se desea buscar.
-- **Respuesta de ejemplo:**
+- **Description:** Searches for a nurse by their name.
+- **Path Parameter:** `name` - The name of the nurse you want to search for.
+- **Example Response:**
   ```json
   {
     "nurseId": 3,
@@ -96,14 +94,15 @@ La API proporciona varias funcionalidades para interactuar con los recursos de e
     "user": "sergio03",
     "password": "passw0rd"
   }
+  ```
 
 ---
 
-#### **Buscar enfermero por ID**
-- **URL:** GET /nurse/{nurseId}
-- **Descripción:** Obtiene la información de un enfermero mediante su ID.
-- **Parámetro de ruta:** nurseId - ID del enfermero.
-- **Respuesta de ejemplo:**
+#### **Search Nurse by ID**
+- **URL:** `GET /nurse/{nurseId}`
+- **Description:** Retrieves information for a nurse by their ID.
+- **Path Parameter:** `nurseId` - The ID of the nurse.
+- **Example Response:**
   ```json
   {
     "nurseId": 4,
@@ -111,50 +110,52 @@ La API proporciona varias funcionalidades para interactuar con los recursos de e
     "user": "martina04",
     "password": "m@rt!na123"
   }
+  ```
 
 ---
 
-#### **Actualizar datos de un enfermero**
-- **URL:** POST /nurse/update/{nurseId}
-- **Descripción:** Actualiza los datos de un enfermero existente. Solo se actualizan los campos proporcionados.
-- **Parámetro de ruta:** nurseId - ID del enfermero.
-- **Respuesta de ejemplo:** 
-  
+#### **Update Nurse Data**
+- **URL:** `POST /nurse/update/{nurseId}`
+- **Description:** Updates the data for an existing nurse. Only the provided fields will be updated.
+- **Path Parameter:** `nurseId` - The ID of the nurse.
+- **Example Response:** 
   ```json
   {
-  "nurseId": 1,
-  "name": "fiorella_updated",
-  "user": "fiorella02",
-  "password": "newpassword123"
+    "nurseId": 1,
+    "name": "fiorella_updated",
+    "user": "fiorella02",
+    "password": "newpassword123"
   }
+  ```
 
 ---
 
-#### **Crear un nuevo enfermero**
-- **URL:** POST /nurse/create
-- **Descripción:** Se crea un nuevo enfermero en la base de datos.
-- **Respuesta de ejemplo:** 
-  
+#### **Create a New Nurse**
+- **URL:** `POST /nurse/create`
+- **Description:** Creates a new nurse in the database.
+- **Example Response:**
   ```json
   {
-  "nurseId": 1,
-  "name": "fiorella_updated",
-  "user": "fiorella02",
-  "password": "newpassword123"
+    "nurseId": 1,
+    "name": "fiorella_updated",
+    "user": "fiorella02",
+    "password": "newpassword123"
   }
+  ```
+
 ---
 
-#### **Eliminar un enfermero por Id**
-- **URL:** POST /nurse/delete/{nurseId}
-- **Descripción:** Se elimina un enfermero mediante su ID en la base de datos.
-- **Parámetro de ruta:** nurseId - ID del enfermero.
-- **Respuesta de ejemplo:** 
-  
+#### **Delete a Nurse by ID**
+- **URL:** `POST /nurse/delete/{nurseId}`
+- **Description:** Deletes a nurse by their ID from the database.
+- **Path Parameter:** `nurseId` - The ID of the nurse.
+- **Example Response:**
   ```json
   {
-  "nurseId": 1,
-  "name": "fiorella_updated",
-  "user": "fiorella02",
-  "password": "newpassword123"
+    "nurseId": 1,
+    "name": "fiorella_updated",
+    "user": "fiorella02",
+    "password": "newpassword123"
   }
+  ```
   
