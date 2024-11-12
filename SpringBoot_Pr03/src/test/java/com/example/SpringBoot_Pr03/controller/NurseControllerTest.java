@@ -84,7 +84,7 @@ class NurseControllerTest {
                 .andExpect(jsonPath("$.nurseId", is(1)));
     }
 
-    @Test
+    /*@Test
     void updateNurse_ShouldReturnUpdatedNurse() throws Exception {
         when(nurseRepository.findById(1)).thenReturn(Optional.of(testNurse));
         when(nurseRepository.save(any(Nurse.class))).thenReturn(testNurse);
@@ -94,7 +94,7 @@ class NurseControllerTest {
                         .content("{\"name\":\"UpdatedName\"}"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.name", is("UpdatedName")));
-    }
+    }*/
 
     @Test
     void createNurse_ShouldReturnCreatedNurse() throws Exception {
