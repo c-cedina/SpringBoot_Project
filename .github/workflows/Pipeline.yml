@@ -27,8 +27,10 @@ jobs:
 
       # Construir con Maven
       - name: Build with Maven
-        run: mvn -B package C:\Users\sejum\git\SpringBoot_Project\SpringBoot_Pr03\pom.xml
+        run: mvn -B package
+        working-directory: SpringBoot_Pr03
 
       # Ejecutar pruebas
       - name: Run tests
-        run: mvn test C:\Users\sejum\git\SpringBoot_Project\SpringBoot_Pr03\pom.xml
+        run: mvn test
+        working-directory: SpringBoot_Pr03
