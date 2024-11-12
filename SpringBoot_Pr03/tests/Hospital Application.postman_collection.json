@@ -162,7 +162,7 @@
 			"response": []
 		},
 		{
-			"name": "update Copy",
+			"name": "createNurse",
 			"request": {
 				"method": "POST",
 				"header": [],

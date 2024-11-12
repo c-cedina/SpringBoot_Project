@@ -95,7 +95,7 @@ class NurseControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.name", is("UpdatedName")));
     }
-
+    
     @Test
     void createNurse_ShouldReturnCreatedNurse() throws Exception {
         when(nurseRepository.findByName("Alice")).thenReturn(null);
