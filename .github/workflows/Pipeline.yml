@@ -27,8 +27,8 @@ jobs:
 
       # Construir con Maven
       - name: Build with Maven
-        run: mvn -B package SpringBoot_Pr03
+        run: mvn -B package ./SpringBoot_Pr03
 
       # Ejecutar pruebas
       - name: Run tests
-        run: mvn test SpringBoot_Pr03
+        run: mvn test ./SpringBoot_Pr03
