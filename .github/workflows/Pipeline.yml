@@ -27,11 +27,11 @@ jobs:
 
       # Construir con Maven
       - name: Build with Maven
-        run: mvn -B package
+        run: mvn -B package --file ./SpringBoot_Project/SpringBoot_Pr03/pom.xml
 
       # Ejecutar pruebas
       - name: Run tests
-        run: mvn test
+        run: mvn test --file ./SpringBoot_Project/SpringBoot_Pr03/pom.xml
 
       # Actualizar el grafo de dependencias (opcional)
       - name: Update dependency graph
