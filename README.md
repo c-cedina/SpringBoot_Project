@@ -120,12 +120,11 @@ The API provides several functionalities to interact with nurse resources. Below
 - **Path Parameter:** `nurseId` - The ID of the nurse.
 - **Example Response:** 
   ```json
-  200 OK
-  //Given that you want to update
+Given that you want to update:
    {
     "name": fiorella_updated,
   }
-  //Response
+Response:
   {
     "nurseId": 1,
     "name": "fiorella_updated",
@@ -141,14 +140,14 @@ The API provides several functionalities to interact with nurse resources. Below
 - **Description:** Creates a new nurse in the database.
 - **Example Response:**
   ```json
-New user's details
+New user's details:
   {
     "name": "Raven",
     "user": "Raven05",
     "password": "newpassword1234"
   }
-201 created 
-Response
+
+Response:
     {
     nurseId: 14,
     "name": "Raven",
@@ -165,9 +164,9 @@ Response
 - **Path Parameter:** `nurseId` - The ID of the nurse.
 - **Example Response:**
   ```json
-Successful response
+Successful response:
   204 No Content
-Unsuccessful response
+Unsuccessful response:
   404 not found
 
   ```
