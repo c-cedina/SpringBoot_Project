@@ -114,8 +114,8 @@ The API provides several functionalities to interact with nurse resources. Below
 
 ---
 
-#### **Update Nurse Data**   LA RESPUESTA ES UNN BOOL?? MISMO ENDPOINT??
-- **URL:** `POST /nurse/{nurseId}` 
+#### **Update Nurse Data**   LA RESPUESTA ES UNN BOOL?? 
+- **URL:** `PUT /nurse/{nurseId}` 
 - **Description:** Updates the data for an existing nurse. Only the provided fields will be updated.
 - **Path Parameter:** `nurseId` - The ID of the nurse.
 - **Example Response:** 
@@ -136,6 +136,7 @@ The API provides several functionalities to interact with nurse resources. Below
 - **Example Response:**
   ```json
   {
+  TRUE
     "nurseId": 5,
     "name": "Raven",
     "user": "Raven05",
@@ -145,8 +146,8 @@ The API provides several functionalities to interact with nurse resources. Below
 
 ---
 
-#### **Delete a Nurse by ID** MODIFICAR RESPONSE MISMO ENDPOINT??
-- **URL:** `POST /nurse/{nurseId}`
+#### **Delete a Nurse by ID** MODIFICAR RESPONSE
+- **URL:** `DELETE /nurse/{nurseId}`
 - **Description:** Deletes a nurse by their ID from the database.
 - **Path Parameter:** `nurseId` - The ID of the nurse.
 - **Example Response:**
