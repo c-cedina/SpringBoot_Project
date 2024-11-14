@@ -127,12 +127,12 @@ public class NurseController {
         return ResponseEntity.status(HttpStatus.CREATED).body(savedNurse);
     }
     
-    @DeleteMapping("/{name}")
-    public @ResponseBody ResponseEntity<Object> deleteNurse(@PathVariable String name) {
-    	if (nurseRepository.findByName(name) == null) {
+    @DeleteMapping("/{nurseId}")
+    public @ResponseBody ResponseEntity<Object> deleteNurse(@PathVariable int nurseId) {
+    	if (nurseRepository.findById(nurseId) == null) {
     		return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         } else {
-        	nurseRepository.delete(nurseRepository.findByName(name));
+        	nurseRepository.deleteById(nurseId);
         	return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
         }
 		
