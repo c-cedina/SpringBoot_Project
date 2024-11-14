@@ -148,13 +148,13 @@ The API provides several functionalities to interact with nurse resources. Below
   }
    ```
 
-Response:
-```json
-    {
-       "nurseId": 14,
-       "name": "Raven",
-       "user": "Raven05",
-       "password": "newpassword1234"
+  Response:
+  ```json
+  {
+        "nurseId": 14,
+        "name": "Raven",
+        "user": "Raven05",
+        "password": "newpassword1234"
       }
   ```
 
