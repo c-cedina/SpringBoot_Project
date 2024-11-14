@@ -156,7 +156,7 @@ Response:
        "name": "Raven",
        "user": "Raven05",
        "password": "newpassword1234"
-   }
+      }
   ```
 
 ---
