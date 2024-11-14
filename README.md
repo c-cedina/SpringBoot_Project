@@ -156,7 +156,7 @@ Response:
        "name": "Raven",
        "user": "Raven05",
        "password": "newpassword1234"
-  }
+   }
   ```
 
 ---
@@ -168,6 +168,7 @@ Response:
 - **Example Response:**
  
    Successful response: 204 No Content
+  
    Unsuccessful response: 404 not found
 
 
