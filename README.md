@@ -118,19 +118,19 @@ The API provides several functionalities to interact with nurse resources. Below
 - **URL:** `PUT /nurse/{nurseId}` 
 - **Description:** Updates the data for an existing nurse. Only the provided fields will be updated.
 - **Path Parameter:** `nurseId` - The ID of the nurse.
-- **Example Response:** 
+- **Example Request Body:** 
   ```json
-Given that you want to update:
-   {
-    "name": fiorella_updated,
-  }
-Response:
   {
-    "nurseId": 1,
-    "name": "fiorella_updated",
-    "user": "fiorella02",
-    "password": "newpassword123"
+    "name": "fiorella_updated"
   }
+  ```
+  ```json
+{
+  "nurseId": 1,
+  "name": "fiorella_updated",
+  "user": "fiorella02",
+  "password": "newpassword123"
+}
   ```
 
 ---
