@@ -124,13 +124,14 @@ The API provides several functionalities to interact with nurse resources. Below
     "name": "fiorella_updated"
   }
   ```
+  
   ```json
-{
-  "nurseId": 1,
-  "name": "fiorella_updated",
-  "user": "fiorella02",
-  "password": "newpassword123"
-}
+  {
+     "nurseId": 1,
+     "name": "fiorella_updated",
+     "user": "fiorella02",
+     "password": "newpassword123"
+  }
   ```
 
 ---
