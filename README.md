@@ -140,6 +140,7 @@ The API provides several functionalities to interact with nurse resources. Below
 - **URL:** `POST /nurse/createNurse`
 - **Description:** Creates a new nurse in the database.
 - **Example Response:**
+- 
   New user's details:
   ```json
   {
