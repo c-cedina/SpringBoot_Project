@@ -140,20 +140,22 @@ The API provides several functionalities to interact with nurse resources. Below
 - **URL:** `POST /nurse/createNurse`
 - **Description:** Creates a new nurse in the database.
 - **Example Response:**
+  New user's details:
   ```json
-New user's details:
   {
-    "name": "Raven",
-    "user": "Raven05",
-    "password": "newpassword1234"
+      "name": "Raven",
+      "user": "Raven05",
+      "password": "newpassword1234"
   }
+   ```
 
 Response:
+```json
     {
-    nurseId: 14,
-    "name": "Raven",
-    "user": "Raven05",
-    "password": "newpassword1234"
+       "nurseId": 14,
+       "name": "Raven",
+       "user": "Raven05",
+       "password": "newpassword1234"
   }
   ```
 
@@ -164,11 +166,9 @@ Response:
 - **Description:** Deletes a nurse by their ID from the database.
 - **Path Parameter:** `nurseId` - The ID of the nurse.
 - **Example Response:**
-  ```json
-Successful response:
-  204 No Content
-Unsuccessful response:
-  404 not found
+ 
+   Successful response: 204 No Content
+   Unsuccessful response: 404 not found
 
-  ```
+
   
