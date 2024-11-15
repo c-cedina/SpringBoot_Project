@@ -6,17 +6,18 @@ import jakarta.persistence.*;
 @Table(name = "nurse")
 public class Nurse {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    @Column(name = "nurse_id")
-    private int nurseId;
-    private String name;
+	@Column(name = "nurse_id")
+	private int nurseId;
+	private String name;
 	private String user;
 	private String password;
-	
-	public Nurse() {}
-	
+
+	public Nurse() {
+	}
+
 	public Nurse(int nurseId, String name, String user, String password) {
 		this.nurseId = nurseId;
 		this.name = name;
