@@ -5,15 +5,15 @@ CREATE DATABASE IF NOT EXISTS nurse_db;
 USE nurse_db;
 
 -- Create the nurses table
-CREATE TABLE IF NOT EXISTS nurses (
-    nurseId INT AUTO_INCREMENT PRIMARY KEY, 
+CREATE TABLE IF NOT EXISTS nurse (
+    nurse_id INT AUTO_INCREMENT PRIMARY KEY, 
     name VARCHAR(100) NOT NULL,             
     user VARCHAR(50) UNIQUE NOT NULL,      
     password VARCHAR(255) NOT NULL          
 );
 
 -- Insert sample data into the nurses table (optional)
-INSERT INTO nurses (name, user, password)
+INSERT INTO nurse (name, user, password)
 VALUES
 ('Fiorella', 'fiorella01', 'password123'),
 ('David', 'david02', 'securepass'),
