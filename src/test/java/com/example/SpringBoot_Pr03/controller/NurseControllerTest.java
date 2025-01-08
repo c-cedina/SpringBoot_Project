@@ -122,18 +122,18 @@ class NurseControllerTest {
 
     @Test
     void deleteNurse_ShouldReturnNoContent() throws Exception {
-        when(nurseRepository.findByName("Alice")).thenReturn(testNurse);
+        when(nurseRepository.findById(1)).thenReturn(Optional.of(testNurse));
         Mockito.doNothing().when(nurseRepository).delete(testNurse);
 
-        mockMvc.perform(MockMvcRequestBuilders.delete("/nurse/Alice"))
+        mockMvc.perform(MockMvcRequestBuilders.delete("/nurse/1"))
                 .andExpect(status().isNoContent());
     }
 
     @Test
     void deleteNurse_NurseNotFound_ShouldReturnNotFound() throws Exception {
-        when(nurseRepository.findByName("NonExisting")).thenReturn(null);
+        when(nurseRepository.findById(2)).thenReturn(Optional.empty());
 
-        mockMvc.perform(MockMvcRequestBuilders.delete("/nurse/NonExisting"))
+        mockMvc.perform(MockMvcRequestBuilders.delete("/nurse/2"))
                 .andExpect(status().isNotFound());
     }
 }
