@@ -47,4 +47,6 @@ jobs:
 
       # Obtenir les logs de MySQL en cas d'échec
       - name: Get MySQL logs
-        run: docker logs mysql
+        run: |
+          docker ps  # Vérifiez que le conteneur est encore en cours d'exécution
+          docker logs $(docker ps -q --filter "ancestor=mysql:latest")
