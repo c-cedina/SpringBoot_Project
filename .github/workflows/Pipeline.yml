@@ -17,10 +17,6 @@ jobs:
         options: >-
           --env MYSQL_ROOT_PASSWORD=rootpassword
           --env MYSQL_DATABASE=nurse_db
-          --health-cmd="mysqladmin ping --silent"
-          --health-interval=10s
-          --health-timeout=5s
-          --health-retries=5
 
         ports:
           - 3307:3306
