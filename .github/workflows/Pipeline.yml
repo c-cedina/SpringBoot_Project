@@ -23,13 +23,14 @@ jobs:
           --health-interval=10s
           --health-timeout=5s
           --health-retries=5
+          --start-period=30s  # Ajouter un délai d'attente avant de vérifier la santé
         ports:
           - 3307:3306
 
     steps:
       - uses: actions/checkout@v4
 
-      # Configurar el JDK
+      # Configurer le JDK
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
@@ -37,10 +38,19 @@ jobs:
           distribution: "temurin"
           cache: maven
 
-      # Construir con Maven
+      # Construire avec Maven
       - name: Build with Maven
         run: mvn package
 
-      # Ejecutar pruebas
+      # Attendre que MySQL soit prêt
+      - name: Wait for MySQL to be ready
+        run: |
+          sleep 30
+
+      # Exécuter les tests
       - name: Run tests
         run: mvn test
+
+      # Obtenir les logs de MySQL en cas d'échec
+      - name: Get MySQL logs
+        run: docker logs mysql
