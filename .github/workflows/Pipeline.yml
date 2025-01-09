@@ -15,13 +15,13 @@ jobs:
       mysql:
         image: mysql:latest
         options: >-
-          --env MYSQL_ROOT_PASSWORD=rootpassword  # Configurer le mot de passe pour l'utilisateur root
-          --env MYSQL_DATABASE=nurse_db          # Créer une base de données 'nurse_db'
-          --health-cmd="mysqladmin ping --silent" # Vérification de la santé
+          --env MYSQL_ROOT_PASSWORD=rootpassword
+          --env MYSQL_DATABASE=nurse_db
+          --health-cmd="mysqladmin ping --silent"
           --health-interval=10s
           --health-timeout=5s
           --health-retries=5
-          --start-period=30s                     # Délai avant de vérifier la santé
+          --start-period=30s
         ports:
           - 3307:3306
 
