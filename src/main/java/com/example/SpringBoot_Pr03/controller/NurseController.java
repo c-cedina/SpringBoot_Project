@@ -103,7 +103,7 @@ public class NurseController {
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
 	}
 
-	@PostMapping("/createNurse")
+	@PostMapping("/nurses")
 	public @ResponseBody ResponseEntity<Nurse> createNurse(@RequestBody Nurse nurse) {
 		String name = nurse.getName();
 		String user = nurse.getUser();
